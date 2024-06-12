@@ -92,15 +92,6 @@ dev_data['UndergradMajor'].bfill(axis=0, inplace=True)
 majors = ['social science','natural science','computer science','development','another engineering','never declared']
 education = dev_data[['Year','UndergradMajor']]
 
-# need to fix
-#############################
-# education.loc[education['UndergradMajor'].str.contains('(?i)social science'), 'SocialScience'] = True
-# education.loc[education['UndergradMajor'].str.contains('(?i)natural science'), 'NaturalScience'] = True
-# education.loc[education['UndergradMajor'].str.contains('(?i)computer science'), 'ComSci'] = True
-# education.loc[education['UndergradMajor'].str.contains('(?i)development'), 'ComSci'] = True
-# education.loc[education['UndergradMajor'].str.contains('(?i)another engineering'), 'OtherEng'] = True
-# education.loc[education['UndergradMajor'].str.contains('(?i)never declared'), 'NoMajor'] = True
-#############################
 
 education = education.assign(
     SocialScience=education['UndergradMajor'].str.contains('social science', case=False),

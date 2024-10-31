@@ -1,4 +1,4 @@
-# Dev Data Analasys 
+# Dev Data Analysis 
 
 ## Offline Codecademy Project
 
